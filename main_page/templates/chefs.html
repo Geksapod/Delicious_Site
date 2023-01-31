@@ -1,0 +1,29 @@
+<!-- ======= Chefs Section ======= -->
+<section id="chefs" class="chefs">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Proffesional <span>Chefs</span></h2>
+            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+        <div class="row">
+            {% for item in chefs %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic">
+                            <img src="{{ item.photo.url }}" class="img-fluid"
+                                 alt="{{ item.surname }} {{ item.surname }} - {{ item.specialty }}">
+                        </div>
+                        <div class="member-info">
+                            <h4>{{ item.surname }} {{ item.surname }}</h4>
+                            <span>{{ item.specialty }}</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+<!-- End Chefs Section -->

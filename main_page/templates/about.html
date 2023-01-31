@@ -1,0 +1,19 @@
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container-fluid">
+        <div class="row">
+            {% for about in abouts %}
+                <div class="col-lg-5 align-items-stretch video-box" style='background-image: url("{{ about.photo.url }}");'>
+                    <a href="{{ about.video.url }}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3>Eum ipsam laborum deleniti<strong>velit pariatur architecto aut nihil</strong></h3>
+                        {{  about.text | safe }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
